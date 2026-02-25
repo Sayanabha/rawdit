@@ -71,7 +71,7 @@ export class WebGLRenderer {
     gl.bindVertexArray(null)
   }
 
-  loadImageData(data: Uint8ClampedArray, width: number, height: number) {
+  loadImageData(data: Uint8ClampedArray | Uint8Array, width: number, height: number) {
     const gl = this.gl
     if (this.imageTexture) gl.deleteTexture(this.imageTexture)
 

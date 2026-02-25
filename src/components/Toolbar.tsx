@@ -61,7 +61,7 @@ export function Toolbar() {
     }}>
       {/* App name */}
       <span style={{ fontWeight: 700, fontSize: '14px', marginRight: '8px', letterSpacing: '-0.02em' }}>
-        rawEdit
+        rawdit
       </span>
 
       <div style={{ width: '1px', height: '20px', background: 'var(--border)', margin: '0 4px' }} />
