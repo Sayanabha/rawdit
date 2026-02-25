@@ -1,17 +1,22 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import wasm from 'vite-plugin-wasm'
-import topLevelAwait from 'vite-plugin-top-level-await'
 
 export default defineConfig({
-  plugins: [react(), wasm(), topLevelAwait()],
+  plugins: [react(), wasm()],
   worker: {
-    plugins: () => [wasm(), topLevelAwait()],
+    plugins: () => [wasm()],
+    format: 'es',
   },
   optimizeDeps: {
-    exclude: ['libraw-wasm'],
+    exclude: ['utif2'],
   },
   build: {
     target: 'esnext',
+    rollupOptions: {
+      output: {
+        format: 'es',
+      },
+    },
   },
 })
