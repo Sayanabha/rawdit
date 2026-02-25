@@ -69,8 +69,8 @@ So rawdit does it manually:
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/raw-editor.git
-cd raw-editor
+git clone https://github.com/Sayanabha/rawdit.git
+cd rawdit
 npm install
 npm run dev
 ```
@@ -100,7 +100,7 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) if you want step-by-step instructions.
 ## Project Structure
 
 ```
-raw-editor/
+rawdit/
 ├── src/
 │   ├── workers/
 │   │   └── raw-decoder.worker.ts     # RAW decode pipeline (Web Worker)
