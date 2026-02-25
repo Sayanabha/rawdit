@@ -116,6 +116,7 @@ async function decodeDNG(arrayBuffer: ArrayBuffer): Promise<{ buffer: Uint8Array
     for (const candidate of candidates) {
       try {
         const safe   = new Uint8Array(candidate)
+        console.log('[DNG] Trying JPEG candidate, size:', safe.buffer)
         if(safe.buffer)     {
         const blob   = new Blob([safe.buffer instanceof ArrayBuffer ? safe.buffer : safe.buffer.slice(0)], { type: 'image/jpeg' })        
         const bitmap = await createImageBitmap(blob)
