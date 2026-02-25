@@ -65,7 +65,7 @@ self.onmessage = async (e: MessageEvent) => {
     self.postMessage({ type: 'progress', value: 60 })
 
     // Check if toRGBA8 gives actual data
-    let rgba: Uint8ClampedArray = UTIF.toRGBA8(bestIfd)
+    let rgba: Uint8Array = UTIF.toRGBA8(bestIfd)
     const sampleMax = Math.max(...Array.from(rgba.slice(0, 400)))
     console.log('[Worker] toRGBA8 max sample:', sampleMax)
 
@@ -203,8 +203,8 @@ function demosaic(
   whiteLevel: number,
   pattern: number[],
   wb: { r: number; g: number; b: number }
-): Uint8ClampedArray {
-  const out   = new Uint8ClampedArray(width * height * 4)
+): Uint8Array {
+  const out   = new Uint8Array(width * height * 4)
   const range = whiteLevel - blackLevel
 
   const get = (x: number, y: number): number => {

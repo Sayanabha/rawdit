@@ -14,8 +14,8 @@ export function Viewport() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   const {
-    rawFile, isDecoding, isImageLoaded,
-    adjustments, maskActive, activeTool,
+    rawFile, isDecoding,
+    maskActive, activeTool,
     brushSize, brushHardness,
     setDecoding, setDecodeProgress, setImageLoaded, setImageDimensions,
   } = useEditorStore()

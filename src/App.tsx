@@ -6,8 +6,7 @@ import { Toolbar } from './components/Toolbar'
 import './index.css'
 
 export default function App() {
-  const { isImageLoaded, rawFile } = useEditorStore()
-
+const { rawFile } = useEditorStore()
   return (
     <div style={{
       display: 'flex',
